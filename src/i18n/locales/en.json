@@ -58,7 +58,15 @@
   },
   "orders": {
     "title": "My orders",
+    "detail": "Order detail",
     "empty": "You have no orders yet",
+    "notFound": "Order not found",
+    "confirmation": {
+      "title": "Order confirmed!",
+      "message": "Thank you for your purchase. You will receive an email with the details.",
+      "viewOrders": "View my orders",
+      "continueShopping": "Continue shopping"
+    },
     "status": {
       "PENDING": "Pending",
       "PAID": "Paid",

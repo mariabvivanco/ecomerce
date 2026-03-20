@@ -58,7 +58,15 @@
   },
   "orders": {
     "title": "Mis pedidos",
+    "detail": "Detalle del pedido",
     "empty": "No tienes pedidos aún",
+    "notFound": "Pedido no encontrado",
+    "confirmation": {
+      "title": "¡Pedido confirmado!",
+      "message": "Gracias por tu compra. Recibirás un correo con los detalles.",
+      "viewOrders": "Ver mis pedidos",
+      "continueShopping": "Seguir comprando"
+    },
     "status": {
       "PENDING": "Pendiente",
       "PAID": "Pagado",
