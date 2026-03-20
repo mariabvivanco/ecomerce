@@ -27,7 +27,15 @@
     "outOfStock": "Sin stock",
     "price": "Precio",
     "featured": "Destacados",
-    "requiresPrescription": "Requiere receta"
+    "requiresPrescription": "Requiere receta",
+    "search": "Buscar",
+    "searchPlaceholder": "Nombre del producto...",
+    "category": "Categoría",
+    "allCategories": "Todas las categorías",
+    "priceRange": "Rango de precio",
+    "minPrice": "Mín €",
+    "maxPrice": "Máx €",
+    "filters": "Filtros"
   },
   "cart": {
     "title": "Carrito",

@@ -27,7 +27,15 @@
     "outOfStock": "Out of stock",
     "price": "Price",
     "featured": "Featured",
-    "requiresPrescription": "Requires prescription"
+    "requiresPrescription": "Requires prescription",
+    "search": "Search",
+    "searchPlaceholder": "Product name...",
+    "category": "Category",
+    "allCategories": "All categories",
+    "priceRange": "Price range",
+    "minPrice": "Min €",
+    "maxPrice": "Max €",
+    "filters": "Filters"
   },
   "cart": {
     "title": "Cart",
