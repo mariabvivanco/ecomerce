@@ -1,0 +1,70 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ha ocurrido un error",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "confirm": "Confirmar"
+  },
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "cart": "Carrito",
+    "orders": "Mis pedidos",
+    "profile": "Mi perfil",
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "register": "Registrarse"
+  },
+  "product": {
+    "addToCart": "Añadir al carrito",
+    "outOfStock": "Sin stock",
+    "price": "Precio",
+    "featured": "Destacados",
+    "requiresPrescription": "Requiere receta"
+  },
+  "cart": {
+    "title": "Carrito",
+    "empty": "Tu carrito está vacío",
+    "total": "Total",
+    "checkout": "Tramitar pedido",
+    "remove": "Eliminar",
+    "quantity": "Cantidad"
+  },
+  "auth": {
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "firstName": "Nombre",
+    "lastName": "Apellidos",
+    "login": "Iniciar sesión",
+    "register": "Crear cuenta",
+    "loginTitle": "Accede a tu cuenta",
+    "registerTitle": "Crea tu cuenta",
+    "noAccount": "¿No tienes cuenta?",
+    "hasAccount": "¿Ya tienes cuenta?"
+  },
+  "checkout": {
+    "title": "Tramitar pedido",
+    "shipping": "Dirección de envío",
+    "billing": "Datos de facturación",
+    "payment": "Pago",
+    "nif": "NIF/CIF",
+    "address": "Dirección",
+    "city": "Ciudad",
+    "postalCode": "Código postal",
+    "phone": "Teléfono (opcional)"
+  },
+  "orders": {
+    "title": "Mis pedidos",
+    "empty": "No tienes pedidos aún",
+    "status": {
+      "PENDING": "Pendiente",
+      "PAID": "Pagado",
+      "SHIPPED": "Enviado",
+      "DELIVERED": "Entregado",
+      "CANCELLED": "Cancelado"
+    }
+  }
+}

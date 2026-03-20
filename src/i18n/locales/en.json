@@ -1,0 +1,70 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "back": "Back",
+    "next": "Next",
+    "confirm": "Confirm"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "cart": "Cart",
+    "orders": "My orders",
+    "profile": "My profile",
+    "login": "Log in",
+    "logout": "Log out",
+    "register": "Register"
+  },
+  "product": {
+    "addToCart": "Add to cart",
+    "outOfStock": "Out of stock",
+    "price": "Price",
+    "featured": "Featured",
+    "requiresPrescription": "Requires prescription"
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty",
+    "total": "Total",
+    "checkout": "Checkout",
+    "remove": "Remove",
+    "quantity": "Quantity"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "login": "Log in",
+    "register": "Create account",
+    "loginTitle": "Sign in to your account",
+    "registerTitle": "Create your account",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "shipping": "Shipping address",
+    "billing": "Billing details",
+    "payment": "Payment",
+    "nif": "Tax ID",
+    "address": "Address",
+    "city": "City",
+    "postalCode": "Postal code",
+    "phone": "Phone (optional)"
+  },
+  "orders": {
+    "title": "My orders",
+    "empty": "You have no orders yet",
+    "status": {
+      "PENDING": "Pending",
+      "PAID": "Paid",
+      "SHIPPED": "Shipped",
+      "DELIVERED": "Delivered",
+      "CANCELLED": "Cancelled"
+    }
+  }
+}
