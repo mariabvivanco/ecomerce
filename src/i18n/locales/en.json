@@ -6,7 +6,11 @@
     "cancel": "Cancel",
     "back": "Back",
     "next": "Next",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "notFound": "Page not found"
+  },
+  "home": {
+    "categories": "Categories"
   },
   "nav": {
     "home": "Home",

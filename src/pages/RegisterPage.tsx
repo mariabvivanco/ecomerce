@@ -2,8 +2,8 @@ import { RegisterForm } from '@/domains/auth/RegisterForm'
 
 export function RegisterPage() {
   return (
-    <main className="min-h-screen flex items-center justify-center p-4">
+    <div className="flex items-center justify-center py-16 px-4">
       <RegisterForm />
-    </main>
+    </div>
   )
 }

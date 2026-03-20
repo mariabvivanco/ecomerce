@@ -2,8 +2,8 @@ import { LoginForm } from '@/domains/auth/LoginForm'
 
 export function LoginPage() {
   return (
-    <main className="min-h-screen flex items-center justify-center p-4">
+    <div className="flex items-center justify-center py-16 px-4">
       <LoginForm />
-    </main>
+    </div>
   )
 }

@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
+import { MainLayout } from '@/components/layout/MainLayout'
 import { PrivateRoute } from '@/components/layout/PrivateRoute'
 import { HomePage } from '@/pages/HomePage'
 import { ProductsPage } from '@/pages/ProductsPage'
@@ -14,21 +15,26 @@ import { ProfilePage } from '@/pages/ProfilePage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 
 export const router = createBrowserRouter([
-  { path: '/', element: <HomePage /> },
-  { path: '/products', element: <ProductsPage /> },
-  { path: '/products/:slug', element: <ProductDetailPage /> },
-  { path: '/cart', element: <CartPage /> },
-  { path: '/login', element: <LoginPage /> },
-  { path: '/register', element: <RegisterPage /> },
-  { path: '/checkout', element: <CheckoutPage /> },
-  { path: '/order-confirmation/:id', element: <OrderConfirmationPage /> },
   {
-    element: <PrivateRoute />,
+    element: <MainLayout />,
     children: [
-      { path: '/orders', element: <OrdersPage /> },
-      { path: '/orders/:id', element: <OrderDetailPage /> },
-      { path: '/profile', element: <ProfilePage /> },
+      { path: '/', element: <HomePage /> },
+      { path: '/products', element: <ProductsPage /> },
+      { path: '/products/:slug', element: <ProductDetailPage /> },
+      { path: '/cart', element: <CartPage /> },
+      { path: '/login', element: <LoginPage /> },
+      { path: '/register', element: <RegisterPage /> },
+      { path: '/checkout', element: <CheckoutPage /> },
+      { path: '/order-confirmation/:id', element: <OrderConfirmationPage /> },
+      {
+        element: <PrivateRoute />,
+        children: [
+          { path: '/orders', element: <OrdersPage /> },
+          { path: '/orders/:id', element: <OrderDetailPage /> },
+          { path: '/profile', element: <ProfilePage /> },
+        ],
+      },
+      { path: '*', element: <NotFoundPage /> },
     ],
   },
-  { path: '*', element: <NotFoundPage /> },
 ])
