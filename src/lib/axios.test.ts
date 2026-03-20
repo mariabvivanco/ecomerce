@@ -4,7 +4,7 @@ import { setupServer } from 'msw/node'
 import { api } from './axios'
 import { useAuthStore } from '@/domains/auth/auth.store'
 
-const BASE = 'http://localhost:3000/api'
+const BASE = 'http://localhost:4000/api'
 
 const server = setupServer()
 

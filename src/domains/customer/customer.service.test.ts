@@ -4,7 +4,7 @@ import { setupServer } from 'msw/node'
 import { getProfile, updateProfile } from './customer.service'
 import type { CustomerProfile } from './customer.types'
 
-const BASE = 'http://localhost:3000/api'
+const BASE = 'http://localhost:4000/api'
 
 const mockProfile: CustomerProfile = {
   id: 'user-1',

@@ -5,7 +5,7 @@ import { createOrder, captureOrder } from './checkout.service'
 import type { CartItem } from '@/domains/cart/cart.store'
 import type { Product } from '@/domains/products/product.types'
 
-const BASE = 'http://localhost:3000/api'
+const BASE = 'http://localhost:4000/api'
 
 const mockProduct = (id: string): Product => ({
   id, name: 'P', slug: id, description: '', price: 10, stock: 5,

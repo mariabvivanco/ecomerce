@@ -3,7 +3,7 @@ import { http, HttpResponse } from 'msw'
 import { setupServer } from 'msw/node'
 import { login, register, logout } from './auth.service'
 
-const BASE = 'http://localhost:3000/api'
+const BASE = 'http://localhost:4000/api'
 const mockUser = { id: '1', email: 'a@a.com', firstName: 'Ana', lastName: 'García' }
 
 const server = setupServer()

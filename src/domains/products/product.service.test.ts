@@ -3,7 +3,7 @@ import { http, HttpResponse } from 'msw'
 import { setupServer } from 'msw/node'
 import { getProducts, getProductBySlug, getFeaturedProducts } from './product.service'
 
-const BASE = 'http://localhost:3000/api'
+const BASE = 'http://localhost:4000/api'
 
 const mockProduct = {
   id: '1', name: 'Paracetamol', slug: 'paracetamol', description: 'Pain relief',
