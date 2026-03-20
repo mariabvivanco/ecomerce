@@ -56,6 +56,11 @@
     "postalCode": "Código postal",
     "phone": "Teléfono (opcional)"
   },
+  "footer": {
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "contact": "Contacto"
+  },
   "profile": {
     "title": "Mi perfil",
     "personalInfo": "Información personal",
