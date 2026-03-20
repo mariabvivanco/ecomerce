@@ -21,8 +21,8 @@ export function OrderDetail({ order }: Props) {
       <ul className="flex flex-col gap-3">
         {order.items.map((item) => (
           <li key={item.id} className="flex gap-3 items-center">
-            <img src={item.product.imageUrl ?? '/placeholder.png'} alt={item.product.name}
-              className="w-14 h-14 object-cover rounded-lg" />
+            <img src={item.product.imageUrl ?? '/placeholder.svg'} alt={item.product.name}
+              className="w-14 h-14 object-contain bg-white rounded-lg border border-gray-100" />
             <div className="flex-1">
               <p className="text-sm font-medium">{item.product.name}</p>
               <p className="text-xs text-gray-500">{t('cart.quantity')}: {item.quantity}</p>

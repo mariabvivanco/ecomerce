@@ -17,9 +17,9 @@ export function ProductCard({ product, onAddToCart }: Props) {
     <article className="flex flex-col rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
       <Link to={`/products/${product.slug}`}>
         <img
-          src={product.imageUrl ?? '/placeholder.png'}
+          src={product.imageUrl ?? '/placeholder.svg'}
           alt={product.name}
-          className="w-full h-48 object-cover"
+          className="w-full h-48 object-contain bg-white p-4"
         />
       </Link>
       <div className="flex flex-col gap-2 p-4 flex-1">

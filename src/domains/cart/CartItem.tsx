@@ -12,9 +12,9 @@ export function CartItem({ item }: Props) {
   return (
     <div className="flex gap-3 py-3 border-b border-gray-100">
       <img
-        src={item.product.imageUrl ?? '/placeholder.png'}
+        src={item.product.imageUrl ?? '/placeholder.svg'}
         alt={item.product.name}
-        className="w-16 h-16 object-cover rounded-lg shrink-0"
+        className="w-16 h-16 object-contain bg-white rounded-lg border border-gray-100 shrink-0"
       />
       <div className="flex flex-col gap-1 flex-1 min-w-0">
         <p className="text-sm font-medium line-clamp-2">{item.product.name}</p>
