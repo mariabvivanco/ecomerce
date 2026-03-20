@@ -56,6 +56,13 @@
     "postalCode": "Postal code",
     "phone": "Phone (optional)"
   },
+  "profile": {
+    "title": "My profile",
+    "personalInfo": "Personal information",
+    "savedCards": "Saved cards",
+    "noCards": "No saved cards",
+    "saved": "Changes saved"
+  },
   "orders": {
     "title": "My orders",
     "detail": "Order detail",

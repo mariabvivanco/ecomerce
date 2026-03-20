@@ -56,6 +56,13 @@
     "postalCode": "Código postal",
     "phone": "Teléfono (opcional)"
   },
+  "profile": {
+    "title": "Mi perfil",
+    "personalInfo": "Información personal",
+    "savedCards": "Tarjetas guardadas",
+    "noCards": "No tienes tarjetas guardadas",
+    "saved": "Cambios guardados"
+  },
   "orders": {
     "title": "Mis pedidos",
     "detail": "Detalle del pedido",
