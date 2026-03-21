@@ -30,7 +30,7 @@ export function CartDrawer({ open, onClose }: Props) {
           }
         </div>
         <div className="p-4">
-          <CartSummary />
+          <CartSummary onClose={onClose} />
         </div>
       </aside>
     </>
