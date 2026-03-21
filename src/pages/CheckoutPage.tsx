@@ -8,11 +8,12 @@ import { ShippingForm } from '@/domains/checkout/ShippingForm'
 import { BillingForm } from '@/domains/checkout/BillingForm'
 import { PayPalButton } from '@/domains/checkout/PayPalButton'
 import { Button } from '@/components/ui/Button'
+import { Spinner } from '@/components/ui/Spinner'
 
 export function CheckoutPage() {
   const { t } = useTranslation()
-  const { items, pendingOrder, submitOrder, handlePaymentSuccess } = useCheckout()
-  const form = useForm<CheckoutData>({ resolver: zodResolver(CheckoutSchema) })
+  const { items, pendingOrder, submitOrder, handlePaymentSuccess, defaultValues, isLoadingProfile } = useCheckout()
+  const form = useForm<CheckoutData>({ resolver: zodResolver(CheckoutSchema), defaultValues })
 
   async function onSubmit(data: CheckoutData) {
     try {
@@ -22,9 +23,8 @@ export function CheckoutPage() {
     }
   }
 
-  if (items.length === 0) {
-    return <main className="p-8 text-center text-gray-500">{t('cart.empty')}</main>
-  }
+  if (items.length === 0) return <main className="p-8 text-center text-gray-500">{t('cart.empty')}</main>
+  if (isLoadingProfile) return <Spinner />
 
   return (
     <main className="max-w-2xl mx-auto p-6 flex flex-col gap-8">

@@ -30,6 +30,11 @@ export type ShippingData = z.infer<typeof ShippingSchema>
 export type BillingData = z.infer<typeof BillingSchema>
 export type CheckoutData = z.infer<typeof CheckoutSchema>
 
+export type CheckoutDefaultValues = {
+  shipping: Partial<ShippingData>
+  billing: Partial<BillingData>
+}
+
 export type CreateOrderResponse = {
   order: { id: string; status: string; total: number }
   paypalOrderId: string
