@@ -1,10 +1,14 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuthStore } from '@/domains/auth/auth.store'
 import { useAuth } from '@/domains/auth/useAuth'
 import { LanguageSelector } from './LanguageSelector'
 
 type Props = { onClose: () => void }
+
+function navClass({ isActive }: { isActive: boolean }) {
+  return `transition-colors ${isActive ? 'text-blue-600 font-medium' : 'text-gray-600 hover:text-gray-900'}`
+}
 
 export function MobileMenu({ onClose }: Props) {
   const { t } = useTranslation()
@@ -18,29 +22,31 @@ export function MobileMenu({ onClose }: Props) {
 
   return (
     <nav className="md:hidden border-t border-gray-200 bg-white px-4 py-4 flex flex-col items-center gap-4 text-sm">
-      <Link to="/products" onClick={onClose} className="text-gray-600 hover:text-gray-900">
+      <NavLink to="/products" end onClick={onClose} className={navClass}>
         {t('nav.products')}
-      </Link>
+      </NavLink>
       {isAuthenticated ? (
         <>
-          <Link to="/orders" onClick={onClose} className="text-gray-600 hover:text-gray-900">
+          <NavLink to="/orders" end onClick={onClose} className={navClass}>
             {t('nav.orders')}
-          </Link>
-          <Link to="/profile" onClick={onClose} className="text-gray-600 hover:text-gray-900">
+          </NavLink>
+          <NavLink to="/profile" end onClick={onClose} className={navClass}>
             {t('nav.profile')}
-          </Link>
-          <button onClick={logout} className="text-gray-600 hover:text-gray-900">
+          </NavLink>
+          <button onClick={logout} className="text-gray-600 hover:text-gray-900 transition-colors">
             {t('nav.logout')}
           </button>
         </>
       ) : (
         <>
-          <Link to="/login" onClick={onClose} className="text-gray-600 hover:text-gray-900">
+          <NavLink to="/login" end onClick={onClose} className={navClass}>
             {t('nav.login')}
-          </Link>
-          <Link to="/register" onClick={onClose} className="font-medium text-blue-600 hover:text-blue-700">
+          </NavLink>
+          <NavLink to="/register" end onClick={onClose} className={({ isActive }) =>
+            `font-medium border rounded-lg px-3 py-1 transition-colors ${isActive ? 'border-blue-800 text-blue-800' : 'border-blue-600 text-blue-600 hover:bg-blue-50'}`
+          }>
             {t('nav.register')}
-          </Link>
+          </NavLink>
         </>
       )}
       <LanguageSelector />
