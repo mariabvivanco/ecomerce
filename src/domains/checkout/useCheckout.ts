@@ -20,6 +20,7 @@ export function useCheckout() {
       address: profile?.billingAddress?.address ?? '',
       city: profile?.billingAddress?.city ?? '',
       postalCode: profile?.billingAddress?.postalCode ?? '',
+      country: profile?.billingAddress?.country ?? 'ES',
     },
     billing: {
       firstName: profile?.billingAddress?.firstName ?? profile?.firstName ?? '',
@@ -29,6 +30,7 @@ export function useCheckout() {
       address: profile?.billingAddress?.address ?? '',
       city: profile?.billingAddress?.city ?? '',
       postalCode: profile?.billingAddress?.postalCode ?? '',
+      country: profile?.billingAddress?.country ?? 'ES',
     },
   }
 

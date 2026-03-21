@@ -6,7 +6,7 @@ export const ShippingSchema = z.object({
   address: z.string().min(1),
   city: z.string().min(1),
   postalCode: z.string().min(1),
-  country: z.string().default('ES'),
+  country: z.string().min(1),
   phone: z.string().optional(),
 })
 
@@ -17,7 +17,7 @@ export const BillingSchema = z.object({
   address: z.string().min(1),
   city: z.string().min(1),
   postalCode: z.string().min(1),
-  country: z.string().default('ES'),
+  country: z.string().min(1),
   email: z.string().email(),
 })
 
