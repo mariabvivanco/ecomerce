@@ -10,8 +10,12 @@ api.interceptors.response.use(
   (response) => response,
   (error: unknown) => {
     if (axios.isAxiosError(error) && error.response?.status === 401) {
-      useAuthStore.getState().clearUser()
-      window.location.href = '/login'
+      const url = error.config?.url ?? ''
+      const isAuthEndpoint = url.includes('/auth/login') || url.includes('/auth/register')
+      if (!isAuthEndpoint) {
+        useAuthStore.getState().clearUser()
+        window.location.href = '/login'
+      }
     }
     return Promise.reject(error)
   },

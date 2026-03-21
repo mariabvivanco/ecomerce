@@ -3,6 +3,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { toast } from 'sonner'
+import { isAxiosError } from 'axios'
 import { LoginSchema, type LoginPayload } from './auth.types'
 import { useAuth } from './useAuth'
 import { Input } from '@/components/ui/Input'
@@ -18,8 +19,11 @@ export function LoginForm() {
   async function onSubmit(data: LoginPayload) {
     try {
       await handleLogin(data)
-    } catch {
-      toast.error(t('common.error'))
+    } catch (err) {
+      const msg = isAxiosError(err) && err.response?.status === 401
+        ? t('auth.invalidCredentials')
+        : t('common.error')
+      toast.error(msg)
     }
   }
 

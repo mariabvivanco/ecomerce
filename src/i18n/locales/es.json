@@ -55,7 +55,9 @@
     "loginTitle": "Accede a tu cuenta",
     "registerTitle": "Crea tu cuenta",
     "noAccount": "¿No tienes cuenta?",
-    "hasAccount": "¿Ya tienes cuenta?"
+    "hasAccount": "¿Ya tienes cuenta?",
+    "invalidCredentials": "Email o contraseña incorrectos",
+    "emailTaken": "Este email ya está registrado"
   },
   "checkout": {
     "title": "Tramitar pedido",

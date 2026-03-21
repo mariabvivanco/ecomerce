@@ -55,7 +55,9 @@
     "loginTitle": "Sign in to your account",
     "registerTitle": "Create your account",
     "noAccount": "Don't have an account?",
-    "hasAccount": "Already have an account?"
+    "hasAccount": "Already have an account?",
+    "invalidCredentials": "Incorrect email or password",
+    "emailTaken": "This email is already registered"
   },
   "checkout": {
     "title": "Checkout",
