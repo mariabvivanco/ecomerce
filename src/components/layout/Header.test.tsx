@@ -11,7 +11,7 @@ function renderHeader() {
 describe('Header', () => {
   it('renders logo', () => {
     renderHeader()
-    expect(screen.getByText('Farmacia')).toBeInTheDocument()
+    expect(screen.getByText('FarmaShop')).toBeInTheDocument()
   })
 
   it('shows login and register links when not authenticated', () => {

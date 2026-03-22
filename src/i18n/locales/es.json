@@ -13,6 +13,7 @@
     "categories": "Categorías"
   },
   "nav": {
+    "brand": "FarmaShop",
     "home": "Inicio",
     "products": "Productos",
     "cart": "Carrito",

@@ -16,7 +16,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
-        <Link to="/" className="text-lg font-bold text-blue-600">Farmacia</Link>
+        <Link to="/" className="text-lg font-bold text-blue-600">{t('nav.brand')}</Link>
 
         <DesktopNav />
 
