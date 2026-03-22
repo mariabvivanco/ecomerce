@@ -32,7 +32,7 @@ export function LoginForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 w-full max-w-sm">
       <h1 className="text-2xl font-semibold">{t('auth.loginTitle')}</h1>
-      {from && (
+      {from === '/checkout' && (
         <p className="text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded-md px-3 py-2">
           {t('auth.loginRequired')}
         </p>

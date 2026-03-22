@@ -1,8 +1,6 @@
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslation } from 'react-i18next'
 import { toast } from 'sonner'
-import { CheckoutSchema, type CheckoutData } from '@/domains/checkout/checkout.types'
+import type { CheckoutData } from '@/domains/checkout/checkout.types'
 import { useCheckout } from '@/domains/checkout/useCheckout'
 import { ShippingForm } from '@/domains/checkout/ShippingForm'
 import { BillingForm } from '@/domains/checkout/BillingForm'
@@ -12,8 +10,7 @@ import { Spinner } from '@/components/ui/Spinner'
 
 export function CheckoutPage() {
   const { t } = useTranslation()
-  const { items, pendingOrder, submitOrder, handlePaymentSuccess, defaultValues, isLoadingProfile } = useCheckout()
-  const form = useForm<CheckoutData>({ resolver: zodResolver(CheckoutSchema), defaultValues })
+  const { items, pendingOrder, submitOrder, handlePaymentSuccess, form, isLoadingProfile } = useCheckout()
 
   async function onSubmit(data: CheckoutData) {
     try {
