@@ -24,11 +24,11 @@ export const router = createBrowserRouter([
       { path: '/cart', element: <CartPage /> },
       { path: '/login', element: <LoginPage /> },
       { path: '/register', element: <RegisterPage /> },
-      { path: '/checkout', element: <CheckoutPage /> },
-      { path: '/order-confirmation/:id', element: <OrderConfirmationPage /> },
       {
         element: <PrivateRoute />,
         children: [
+          { path: '/checkout', element: <CheckoutPage /> },
+          { path: '/order-confirmation/:id', element: <OrderConfirmationPage /> },
           { path: '/orders', element: <OrdersPage /> },
           { path: '/orders/:id', element: <OrderDetailPage /> },
           { path: '/profile', element: <ProfilePage /> },

@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { toast } from 'sonner'
 import { isAxiosError } from 'axios'
 import { RegisterSchema, type RegisterPayload } from './auth.types'
@@ -12,13 +12,15 @@ import { Button } from '@/components/ui/Button'
 export function RegisterForm() {
   const { t } = useTranslation()
   const { handleRegister } = useAuth()
+  const location = useLocation()
+  const from = (location.state as { from?: string })?.from
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<RegisterPayload>({
     resolver: zodResolver(RegisterSchema),
   })
 
   async function onSubmit(data: RegisterPayload) {
     try {
-      await handleRegister(data)
+      await handleRegister(data, from ?? '/')
     } catch (err) {
       const msg = isAxiosError(err) && err.response?.status === 409
         ? t('auth.emailTaken')

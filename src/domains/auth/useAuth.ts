@@ -12,18 +12,16 @@ export function useAuth() {
   const navigate = useNavigate()
   const { t } = useTranslation()
 
-  async function handleLogin(payload: LoginPayload) {
+  async function handleLogin(payload: LoginPayload, redirectTo = '/') {
     const { user: authUser } = await authService.login(payload)
-    clearCart()
     setUser(authUser)
-    void navigate('/')
+    void navigate(redirectTo)
   }
 
-  async function handleRegister(payload: RegisterPayload) {
+  async function handleRegister(payload: RegisterPayload, redirectTo = '/') {
     const { user: authUser } = await authService.register(payload)
-    clearCart()
     setUser(authUser)
-    void navigate('/')
+    void navigate(redirectTo)
   }
 
   async function handleLogout() {

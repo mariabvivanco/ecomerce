@@ -58,7 +58,8 @@
     "noAccount": "¿No tienes cuenta?",
     "hasAccount": "¿Ya tienes cuenta?",
     "invalidCredentials": "Email o contraseña incorrectos",
-    "emailTaken": "Este email ya está registrado"
+    "emailTaken": "Este email ya está registrado",
+    "loginRequired": "Inicia sesión para continuar con tu pedido"
   },
   "checkout": {
     "title": "Tramitar pedido",
